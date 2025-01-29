@@ -1,10 +1,13 @@
 import './App.css'
 import Navbar from './Components/Navbar'
+import Login from './Pages/Login'
 
 function App() {
   return (
     <>
-      <Navbar />
+      <div className="bg-surface-a0">
+      <Login />
+      </div>
     </>
   )
 }

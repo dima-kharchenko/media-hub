@@ -13,17 +13,8 @@ function App() {
     <>
      <Router>
       <Routes>
-      {page_routes.map(({ path, component: Component, layout }, index) => {
-          const Layout = (() => {
-            switch (layout) {
-              case 'default':
-                return DefaultLayout;
-              case 'auth':
-                return AuthLayout;
-              default:
-                return layout || React.Fragment;
-            }
-          })(); // choose your layout
+        {page_routes.map(({ path, component: Component, layout }, index) => {
+          const Layout = layout === 'default' ? DefaultLayout : layout ? layout : React.Fragment;  // choose your layout
           return (
             <Route
               key={index}

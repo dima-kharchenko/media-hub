@@ -1,38 +1,34 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <aside className="w-64 bg-surface-a10 text-white p-4  flex flex-col">
+    <nav className="w-[18.125rem] h-[30.3125rem] bg-surface-a10 text-white p-4 rounded-2xl shadow-[0_0_1px_1px] shadow-primary-a0 mt-1 ">
       {/* Profile */}
-      <div className="text-center mb-6 items-ce">
-        <img
-          src="https://via.placeholder.com/100"
-          alt="Profile"
-          className="w-16 h-16 rounded-full mx-auto"
-        />
-        <h2 className="mt-2 font-semibold">Pupa Lupa</h2>
-        <p className="text-sm text-gray-400">Data Scientist</p>
+      <div className="relative mb-6 px-4">
+        <div className="relative flex flex-col items-start pl-4 pt-12">
+          <img
+            src=""
+            alt="ProfileImage"
+            className="w-16 h-16 rounded-full border-2 border-gray-600 mb-2"
+          />
+          <h2 className="font-semibold text-lg">Pupa Lupa</h2>
+          <p className="text-sm text-surface-a40">Data Scientist</p>
+        </div>
       </div>
 
-      {/* Nav */}
-      <nav className="flex flex-col gap-2">
-        <a href="#" className="px-4 py-2 rounded-md hover:bg-gray-700 transition">
-          Home
-        </a>
-        <a href="#" className="px-4 py-2 rounded-md hover:bg-gray-700 transition">
-          Profile
-        </a>
-        <a href="#" className="px-4 py-2 rounded-md hover:bg-gray-700 transition">
-          Messages
-        </a>
-        <a href="#" className="px-4 py-2 rounded-md hover:bg-gray-700 transition">
-          Notifications
-        </a>
-        <a href="#" className="px-4 py-2 rounded-md hover:bg-gray-700 transition">
-          Saved
-        </a>
-      </nav>
-    </aside>
+      {/* Menu */}
+      <ul className="flex flex-col text-sm">
+        {["Home", "Profile", "Messages", "Notifications", "Saved"].map((item, index) => (
+          <li key={item} className="px-4">
+            <a className="block py-3 text-[#8B8B8B] hover:text-[#FFFFFF] transition">
+            <Link to={`/${item.toLowerCase()}`}> {item} </Link>
+            </a>
+            {index < 4 && <hr className="border-gray-700" />}
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };
 

@@ -5,8 +5,7 @@ function AuthLayout({ children }) {
   return (
     <div className='bg-surface-a0'>
       <Login></Login>
-      <div>{children}</div>         {/*дефолтный код страницы, без 
-                                        разрешения использовать defaultlayout*/}
+      <div>{children}</div>         {/*default page code, without permission use defaultlayout*/}
     </div>
   );
 }

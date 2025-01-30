@@ -7,9 +7,9 @@ import Login from "../Pages/Login";
 
 //to add new routes
 const page_routes = [
-  { path: '/', component: Home, layout: 'default' },
+  { path: '/home', component: Home, layout: 'default' },
   { path: '/login', component: Login, layout: 'auth' },
-  { path: '/', component: Sidebar, layout: 'default' },
+  { path: '/home', component: Sidebar, layout: 'default' },
   { path: '/about', component: About, layout: 'default' },
   { path: '*', component: NotFound, layout: '' },  
   

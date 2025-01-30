@@ -5,9 +5,7 @@ function Navbar(){
         <>
         <nav className="bg-surface-a10 border-b-1 border-primary-a0">
             <div className="px-5 flex flex-wrap items-center justify-between mx-auto h-12">
-                
-                <Link to="/"> {/* logo link */}
-                    
+                <Link to="/home"> {/* logo link */}
                     <i className="fa-brands fa-github text-3xl text-white"></i>
                 </Link>
                  

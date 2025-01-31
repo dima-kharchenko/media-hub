@@ -9,7 +9,7 @@ function NewPost(){
                     <input type="text" placeholder="What's on your mind?" className="mt-1 placeholder-white text-white focus:outline-none"/>
                     <hr className="w-full border-white mt-1"/>
                     <div className="flex mt-6 justify-between">
-                        <button className="cursor-pointer"><i class="fa-regular fa-image text-white text-xl ml-2 my-auto"></i></button>
+                        <button className="cursor-pointer"><i class="fa-regular fa-image text-white text-xl ml-2 my-auto hover:text-primary-a0 transition"></i></button>
                         <button type="submit" className="bg-primary-a0 text-white py-1 px-4 rounded-full cursor-pointer">Post</button>
                     </div>
                 </div>

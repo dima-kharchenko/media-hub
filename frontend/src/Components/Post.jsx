@@ -5,7 +5,7 @@ import image from "../assets/backgrounds/mars.jpg"
 function Post(){
     return(
         <div className="w-full bg-surface-a10 rounded-lg shadow-[0_0_1px_1px] shadow-primary-a0 mt-6">
-            <div className="mx-8 py-6">
+            <div className="mx-8 pt-6">
                 <div className="flex justify-between">
                     <NavLink to="#" className="flex">
                         <img src={pfp} alt="profile picture" className="w-12 h-12 rounded-full shadow-[0_0_1px_1px] shadow-primary-a0"/>
@@ -16,7 +16,9 @@ function Post(){
                         <p className="text-surface-a40 text-sm">1 day ago</p>
                     </div>
                 </div>
-                <hr className="my-6 border-gray-700"/>
+            </div>
+            <hr className="my-6 border-surface-a20"/>
+            <div className="mx-8 pb-6">
                 <div>
                     <p className="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae ante et mauris consequat placerat at ac elit. Etiam convallis.</p>
                     <img src={image} alt="post image" className="mt-6 rounded-md"/>

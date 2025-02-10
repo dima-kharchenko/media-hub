@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 function RecentLibraries(){
     return(
-        <div className="w-full bg-surface-a10 text-white rounded-lg shadow-[0_0_1px_1px] shadow-primary-a0 fixed width-inherit mt-122">
+        <div className="w-full py-1 mt-6 bg-surface-a10 text-white rounded-lg shadow-[0_0_1px_1px] shadow-primary-a0">
             <div className="px-8">
                 <div className="flex my-4">
                     <i className="fa-solid fa-landmark my-auto"></i>

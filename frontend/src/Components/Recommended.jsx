@@ -3,7 +3,7 @@ import image from "../assets/cats/cat_pfp_4.jpg"
 
 function Recommended(){
     return(
-        <div className="w-full bg-surface-a10 text-white rounded-lg shadow-[0_0_1px_1px] shadow-primary-a0 fixed width-inherit">
+        <div className="w-full py-1 bg-surface-a10 text-white rounded-lg shadow-[0_0_1px_1px] shadow-primary-a0">
             <div className="px-8">
                 <p className="my-4 font-medium">Recommended</p> 
             </div>

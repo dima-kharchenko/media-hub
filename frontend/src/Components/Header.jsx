@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-function Navbar(){
+function Header(){
     return(
         <>
         <nav className="bg-surface-a10 border-b-1 border-primary-a0 fixed top-0 w-full z-50">
@@ -22,4 +22,4 @@ function Navbar(){
     );
 }
 
-export default Navbar
+export default Header

@@ -1,12 +1,11 @@
 import React from 'react';
-import './App.css'
+import axios from 'axios';
+import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import page_routes from './Layouts/page_routes';
 import DefaultLayout from './Layouts/DefaultLayout';
 import AuthLayout from './Layouts/AuthLayout';
-
-
 
 function App() {
   return (
@@ -41,5 +40,6 @@ function App() {
     </>
   )
 }
+
 
 export default App

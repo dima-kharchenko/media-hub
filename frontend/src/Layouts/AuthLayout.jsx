@@ -1,11 +1,11 @@
 
 import React from 'react';
-
+import Login from '../Pages/Login';
 function AuthLayout({ children }) {
   return (
-    <div>
-      <div>{children}</div>         {/*дефолтный код страницы, без 
-                                        разрешения использовать defaultlayout*/}
+    <div className='bg-surface-a0'>
+      <Login></Login>
+      <div>{children}</div>         {/*default page code, without permission use defaultlayout*/}
     </div>
   );
 }

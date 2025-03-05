@@ -17,3 +17,11 @@
     --color-surface-a40: #717171;
     --color-surface-a50: #8b8b8b;
 }
+
+.active {
+    color: white;
+}
+
+.width-inherit {width: inherit}
+
+body {background-color: #121212;}

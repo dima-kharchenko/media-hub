@@ -1,18 +1,17 @@
 import React from 'react';
-import axios from 'axios';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 import page_routes from './Layouts/page_routes';
 import DefaultLayout from './Layouts/DefaultLayout';
 import AuthLayout from './Layouts/AuthLayout';
+import ProtectedRoute from './Components/ProtectedRoute';
 
 function App() {
   return (
     <>
      <Router>
       <Routes>
-      {page_routes.map(({ path, component: Component, layout }, index) => {
+      {page_routes.map(({ path, component: Component, layout, protected: isProtected }, index) => {
           const Layout = (() => {
             switch (layout) {
               case 'default':
@@ -23,15 +22,16 @@ function App() {
                 return layout || React.Fragment;
             }
           })();  // choose your layout
+          const Element = (
+            <Layout>
+              <Component />
+            </Layout>
+          );
           return (
             <Route
               key={index}
               path={path}
-              element={
-                <Layout>
-                  <Component />
-                </Layout>
-              }
+              element={isProtected ? <ProtectedRoute>{Element}</ProtectedRoute> : Element}
             />
           );
         })}

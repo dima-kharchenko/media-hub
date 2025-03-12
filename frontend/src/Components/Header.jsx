@@ -1,6 +1,14 @@
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import Cookies from 'js-cookie';
 
 function Header(){
+    const navigate = useNavigate()
+    const logout = () => {
+        Cookies.remove("access_token") 
+        Cookies.remove("refresh_token") 
+        navigate("/login")
+    }
     return(
         <>
         <nav className="bg-surface-a10 border-b-1 border-primary-a0 fixed top-0 w-full z-50">
@@ -14,6 +22,7 @@ function Header(){
                         <input type="text" id="simple-search" style={{fontFamily:"Arial, FontAwesome"}} className="bg-surface-a20 h-8 text-white placeholder-neutral-400 rounded-full block w-full p-3  shadow-[0_0_1px_1px] shadow-primary-a0 hover:shadow-[0_0_5px_1px] focus:shadow-[0_0_5px_1px] duration-150 focus:outline-none selection:bg-surface-a50" placeholder=" &#xF002; Search" />
                     </div>
                 </form>
+                <p className="text-white" onClick={logout}>Logout</p>
                 <Link to="/about"> {/* profile link */}
                 <i className="fa-regular fa-user text-2xl text-white"></i></Link>
             </div>

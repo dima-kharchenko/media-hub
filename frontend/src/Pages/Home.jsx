@@ -1,9 +1,14 @@
-import React from 'react';
+import NewPost from '../Components/NewPost';
+import Post from '../Components/Post';
 
 function Home() {
   return (
-    <div>
-    </div>
+      [<NewPost />,
+      <Post />,
+      <Post />,
+      <Post />,
+      <Post />,
+      <Post />]
   );
 }
 

@@ -4,7 +4,7 @@ import image from "../assets/backgrounds/mars.jpg"
 
 function Post(){
     return(
-        <div className="w-full bg-surface-a10 rounded-lg shadow-[0_0_1px_1px] shadow-primary-a0 mt-6">
+        <div className="tile">
             <div className="mx-8 pt-6">
                 <div className="flex justify-between">
                     <NavLink to="#" className="flex">

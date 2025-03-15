@@ -1,6 +1,3 @@
-{/* TEST PAGE */}
-import React from 'react';
-
 function NotFound() {
   return(
       <div className="flex bg-surface-a0 h-screen">

@@ -1,21 +1,20 @@
 import Sidebar from '../Components/Sidebar';
 import Recommended from '../Components/Recommended';
-import News from '../Components/News';
 import RecentLibraries from '../Components/RecentLibraries';
 import ColumnsLayout from './ColumnsLayout';
 
-function DefaultLayout({ children }) {
+function ProfileLayout({ children }) {
   return (
     <ColumnsLayout left={
-        [<Sidebar />, <RecentLibraries />]
+        [<Sidebar key="sidebar"/>, <RecentLibraries key="recent_libraries"/>]
     }
     center={
         children 
     }
     right={
-        [<Recommended />, <News />]
+        <Recommended />
     }/>
   );
 }
 
-export default DefaultLayout;
+export default ProfileLayout;

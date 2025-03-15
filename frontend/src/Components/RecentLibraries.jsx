@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 function RecentLibraries(){
     return(
-        <div className="w-full py-1 mt-6 bg-surface-a10 text-white rounded-lg shadow-[0_0_1px_1px] shadow-primary-a0">
+        <div className="tile">
             <div className="px-8">
                 <div className="flex my-4">
                     <i className="fa-solid fa-landmark my-auto"></i>
@@ -13,7 +13,7 @@ function RecentLibraries(){
             <div className="px-8">
                 <ul className="">
                     {["Library", "Library", "Library"].map(s => s.slice(0, 60) + (s.length > 60 ? "..." : "")).map((item, index) => (
-                    <li key={item}>
+                    <li key={index}>
                         <div className="flex justify-between">
                             <NavLink to="#" className="flex my-4">
                                 <div className="flex text-surface-a50 hover:text-white transition overflow-ellipsis">

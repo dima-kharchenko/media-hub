@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import page_routes from './Layouts/page_routes';
 import DefaultLayout from './Layouts/DefaultLayout';
 import AuthLayout from './Layouts/AuthLayout';
+import ProfileLayout from './Layouts/ProfileLayout';
 import ProtectedRoute from './Components/ProtectedRoute';
 
 function App() {
@@ -11,20 +12,22 @@ function App() {
     <>
      <Router>
       <Routes>
-      {page_routes.map(({ path, component: Component, layout, protected: isProtected }, index) => {
+      {page_routes.map(({ path, page: Page, layout, protected: isProtected }, index) => {
           const Layout = (() => {
             switch (layout) {
               case 'default':
                 return DefaultLayout;
               case 'auth':
                 return AuthLayout;
+              case 'profile':
+                return ProfileLayout;
               default:
                 return layout || React.Fragment;
             }
           })();  // choose your layout
           const Element = (
             <Layout>
-              <Component />
+              <Page />
             </Layout>
           );
           return (

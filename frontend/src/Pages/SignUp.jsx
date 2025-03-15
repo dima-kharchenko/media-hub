@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router";
 import Input from "../Components/Input";
 import axios from "axios";
-import Cookies from 'js-cookie';
 import { getTokens, setTokens } from "../api";
 
 const USER_REGEX = /^(?=.{3,}$)[a-z0-9]+(_|-)*[a-z0-9]+$/;

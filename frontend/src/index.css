@@ -17,6 +17,9 @@
     --color-surface-a40: #717171;
     --color-surface-a50: #8b8b8b;
 }
+.tile {
+    @apply w-full bg-surface-a10 text-white rounded-lg shadow-[0_0_1px_1px] shadow-primary-a0;
+}
 
 .active {
     color: white;
